@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Papers - ResearchHub</title>
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+<body class="search-page">
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">
+                <a href="index.html">ResearchHub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="search.html" class="active">Search</a></li>
+                <li><a href="login.html" class="btn-login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="search-container">
+        <div class="search-header">
+            <h1>Search Papers</h1>
+            <div class="search-box">
+                <input type="text" placeholder="Search by title, author, or keywords">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <label><input type="checkbox"> Computer Science</label>
+                <label><input type="checkbox"> Medicine</label>
+                <label><input type="checkbox"> Physics</label>
+                <label><input type="checkbox"> Biology</label>
+            </div>
+            <div class="filter-group">
+                <h3>Year</h3>
+                <label><input type="checkbox"> 2024</label>
+                <label><input type="checkbox"> 2023</label>
+                <label><input type="checkbox"> 2022</label>
+                <label><input type="checkbox"> 2021</label>
+            </div>
+            <div class="filter-group">
+                <h3>Publication Type</h3>
+                <label><input type="checkbox"> Journal Article</label>
+                <label><input type="checkbox"> Conference Paper</label>
+                <label><input type="checkbox"> Review</label>
+                <label><input type="checkbox"> Book Chapter</label>
+            </div>
+        </div>
+
+        <div class="search-results">
+            <div class="result-card">
+                <h3>Machine Learning Applications in Healthcare</h3>
+                <p class="authors">John Doe, Jane Smith</p>
+                <p class="abstract">This paper explores the applications of machine learning in modern healthcare...</p>
+                <div class="paper-meta">
+                    <span>Published: 2024</span>
+                    <span>Citations: 45</span>
+                    <span>Journal of Medical AI</span>
+                </div>
+            </div>
+            <div class="result-card">
+                <h3>Quantum Computing: A New Era</h3>
+                <p class="authors">Alice Johnson, Bob Wilson</p>
+                <p class="abstract">An overview of recent advances in quantum computing and its implications...</p>
+                <div class="paper-meta">
+                    <span>Published: 2023</span>
+                    <span>Citations: 89</span>
+                    <span>Quantum Science Review</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="page-link">Previous</a>
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">Next</a>
+        </div>
+    </main>
+</body>
+</html>
