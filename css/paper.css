@@ -158,6 +158,11 @@ body {
     box-shadow: 0 5px 20px rgba(0, 84, 180, 0.4);
 }
 
+.preview-btn a{
+    text-decoration:  none;
+    color: white;
+}
+
 /* Paper Summary */
 .summary-title {
     font-size: 20px;
