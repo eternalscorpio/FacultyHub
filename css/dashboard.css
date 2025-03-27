@@ -83,16 +83,17 @@ body {
 .notifications {
     position: relative;
     cursor: pointer;
+    padding-right: 10px;
 }
 
 .notification-badge {
     position: absolute;
     top: -8px;
-    right: -10px;
+    right: 1px;
     background: var(--danger);
     color: white;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -116,6 +117,10 @@ body {
     max-width: 1400px;
     margin: 2rem auto;
     padding: 0 2rem;
+}
+
+.logout-btn{
+    font-size: 20px;
 }
 
 /* Sidebar Styles */
@@ -165,6 +170,9 @@ body {
     justify-content: space-evenly;
 }
 
+.user-badges i{
+    font-size: large;
+}
 
 .sidebar-nav ul {
     list-style: none;
@@ -741,3 +749,103 @@ body {
     text-align: center;
 }
 
+/* Review Section */
+.review-section {
+    width: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.review-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0056b3;
+    cursor: pointer;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.badge {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.review-category {
+    background: #28a745;
+    color: white;
+}
+
+.review-status {
+    background: #007bff;
+    color: white;
+}
+
+.review-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.review-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.review-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.review-actions {
+    margin-top: 10px;
+}
+
+.review-cite {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.download-review {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    background: white;
+    color: #007bff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.download-review:hover {
+    background: #007bff;
+    color: white;
+}
