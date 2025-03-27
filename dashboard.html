@@ -13,7 +13,9 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/dashboard.js"></script>
+    <script src="/js/chart.js"></script>
 </head>
 
 <body class="dashboard-page">
@@ -88,14 +90,15 @@
         </aside>
 
         <main class="dashboard-main">
-            
+
             <div class="dashboard-header">
                 <div class="welcome-section">
                     <h1>Welcome back, John!</h1>
                     <p class="subtitle">Here's what's happening with your research</p>
                 </div>
                 <div class="quick-actions">
-                    <button class="btn-primary"><span class="btn-icon"><i class="bi bi-journal-plus"></i></span> New Paper</button>
+                    <button class="btn-primary"><span class="btn-icon"><i class="bi bi-journal-plus"></i></span> New
+                        Paper</button>
                     <!-- <button class="btn-secondary"><span class="btn-icon">✨</span> Create Task</button> -->
                     <button class="btn-outline"><span class="btn-icon"><i
                                 class="fa-solid fa-handshake-simple bg-primary"></i></span> Collaborate</button>
@@ -125,7 +128,8 @@
                     <div class="trend down">↓ 2 from yesterday</div>
                 </div> -->
                 <div class="dashboard-card gradient-1">
-                    <div class="card-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i></div>
                     <h3>Impact</h3>
                     <div class="stat">4.2</div>
                     <p>Impact Factor</p>
@@ -273,6 +277,7 @@
                     </div>
                 </section>
             </div>
+            
 
             <!-- <section class="insights-section">
                 <h2>Research Insights</h2>
@@ -345,7 +350,7 @@
                             <input type="text" id="title" value="Research Scientist">
                         </div>
                     </div>
-                    
+
                     <div class="settings-group">
                         <h3>Preferences</h3>
                         <div class="setting-item">
@@ -363,7 +368,7 @@
                                 <option value="dark">Dark</option>
                             </select>
                         </div>
-                        
+
                     </div>
                     <div class="settings-group">
                         <h3>Profile Integration</h3>
@@ -376,8 +381,171 @@
                             <input type="text" id="orcid" placeholder="Profile URL">
                         </div>
                     </div>
-                    
+
                     <button class="btn-primary save-settings">Save Changes</button>
+                </div>
+            </section>
+
+            <section id="collaborations-section" class="collaboration-panel hidden">
+                <h3>Active Collaborations</h3>
+                <div class="collaboration-container">
+                    <div class="author">
+                        <img src="/img/collab-2.jpg" alt="John Smith" class="avatar-rounded">
+                        <p>John Smith</p>
+                        <small>University of California</small>
+                    </div>
+                    <div class="author">
+                        <img src="img/collab-1.jpg" alt="Jane Doe" class="avatar-rounded">
+                        <p>Jane Doe</p>
+                        <small>Stanford University</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/university-1.png" alt="MIT" class="avatar-rounded">
+                        <p>MIT</p>
+                        <small>Multiple collaborations</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/university-2.png" alt="Harvard University" class="avatar-rounded">
+                        <p>Harvard University</p>
+                        <small>Multiple collaborations</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/industry-1.jpg" alt="Google" class="avatar-rounded">
+                        <p>Google</p>
+                    </div>
+                </div>
+                <h3>Popular Collaborations</h3>
+                <div class="collaboration-container">
+                    <div class="author">
+                        <img src="/img/collab-6.jpg" alt="Dr. Sophia Patel" class="avatar-rounded">
+                        <p>Dr. Sophia Patel</p>
+                        <small>Stanford University</small>
+                    </div>
+                    <div class="author">
+                        <img src="img/collab-7.jpg" alt="Dr. Rachel Lee" class="avatar-rounded">
+                        <p>Dr. Rachel Lee</p>
+                        <small>MIT</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/collab-9.jpg" alt="Dr. Emma Taylor" class="avatar-rounded">
+                        <p>Dr. Emma Taylor</p>
+                        <small>Harvard University</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/collab-4.jpg" alt="Dr. Michael Brown" class="avatar-rounded">
+                        <p>Dr. Michael Brown</p>
+                        <small>University of California</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/collab-5.jpg" alt="Dr. David Kim" class="avatar-rounded">
+                        <p>Dr. David Kim</p>
+                        <small>University of Oxford</small>
+                    </div>
+                </div>
+                <h3>Industrial Collaborations</h3>
+                <div class="collaboration-container">
+                    <div class="author">
+                        <img src="/img/industry-1.jpg" alt="Author Name" class="avatar-rounded">
+                        <p>Google</p>
+                    </div>
+                    <div class="author">
+                        <img src="img/industry-2.jpg" alt="Author Name" class="avatar-rounded">
+                        <p>OpenAI</p>
+                    </div>
+                    <div class="author">
+                        <img src="/img/industry-3.jpg" alt="Author Name" class="avatar-rounded">
+                        <p>Microsoft</p>
+                    </div>
+                </div>
+                <h3>University Collaborations</h3>
+                <div class="collaboration-container">
+                    <div class="author">
+                        <img src="/img/university-1.png" alt="Author Name" class="avatar-rounded">
+                        <p>MIT</p>
+                        <small>Multiple collaborations</small>
+                    </div>
+                    <div class="author">
+                        <img src="img/university-2.png" alt="Author Name" class="avatar-rounded">
+                        <p>Harvard University</p>
+                        <small>Multiple collaborations</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/university-3.png" alt="Author Name" class="avatar-rounded">
+                        <p>Cambridge University</p>
+                        <small>Single Collaboration</small>
+                    </div>
+                    <div class="author">
+                        <img src="/img/university-4.png" alt="Author Name" class="avatar-rounded">
+                        <p>Yale University</p>
+                        <small>Single Collaboration</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="analytics-section" class="analytics-panel hidden">
+                <h3>Analytics</h3>
+
+                <div class="chart-container">
+                    <canvas id="papersCitationsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="impactFactorChart"></canvas>
+                </div>
+
+            </section>
+
+            <section id="publications-section" class="publications-panel hidden">
+                <div class="panel-container">
+                    <div class="panel-group">
+                        <h2>Publications</h2> <br>
+                        <div class="publication-category">
+                            <h3>Computer Science & AI</h3>
+                            <div class="publication-item">
+                                <p><strong>Transformer-Based Models for Low-Resource Language Translation</strong></p>
+                                <p>Authors: Johe Doe, Alan Turing, Yoshua Bengio</p>
+                                <p>Venue: Journal of Machine Learning Research (2023)</p>
+                                <p>Citations: 128</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Efficient Neural Network Architectures for Natural Language
+                                        Processing</strong></p>
+                                <p>Authors: John Doe, Andrew Ng, Geoffrey Hinton</p>
+                                <p>Venue: Conference on Neural Processing Systems (2022)</p>
+                                <p>Citations: 56</p>
+                            </div>
+                        </div>
+                        <div class="publication-category">
+                            <h3>Conference Papers</h3>
+                            <div class="publication-item">
+                                <p><strong>Deep Learning for Computer Vision</strong></p>
+                                <p>Authors: Johe Doe, Yoshua Bengio, Aaron Courville</p>
+                                <p>Venue: Conference on Computer Pattern Recognition (2020)</p>
+                                <p>Citations: 201</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Robust Computer Vision for Autonomous Vehicles in Adverse Weather</strong>
+                                </p>
+                                <p>Authors: John Doe</p>
+                                <p>Venue: CVPR (2021)</p>
+                                <p>Citations: 187</p>
+                            </div>
+                        </div>
+                        <div class="publication-category">
+                            <h3>Books and Chapters</h3>
+                            <div class="publication-item">
+                                <p><strong>Deep Learning for Natural Language Processing</strong></p>
+                                <p>Authors: Johe Doe, Hinrich Schütze</p>
+                                <p>Publisher: Cambridge University Press (2020)</p>
+                                <p>Citations: 201</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Decolonizing AI Education (Book Chapter)</strong></p>
+                                <p>Authors: Johe Doe, Hinrich Schütze</p>
+                                <p>Book: AI Ethics in Higher Education (Springer, 2021)</p>
+                                <p>Citations: 68</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
@@ -438,7 +606,7 @@
                         <div class="metric-icon"><i class="bi bi-graph-up-arrow bg-primary"></i></div>
                         <div class="metric-info">
                             <h4>H-Index</h4>
-                            
+
                         </div>
                         <div class="metric-value">18</div>
                     </div>
