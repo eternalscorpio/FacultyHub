@@ -333,59 +333,77 @@
                 </div>
             </section> -->
 
-            <section id="settings-section" class="settings-section hidden">
-                <div class="settings-container">
-                    <div class="settings-group">
-                        <h3>Profile Settings</h3>
-                        <div class="setting-item">
-                            <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" value="John Doe">
+            <!-- Publications  -->
+
+            <section id="publications-section" class="publications-panel hidden">
+                <div class="panel-container">
+                    <div class="panel-group">
+                        <h2>Publications</h2> <br>
+                        <div class="publication-category">
+                            <h3>Computer Science & AI</h3>
+                            <div class="publication-item">
+                                <p><strong>Transformer-Based Models for Low-Resource Language Translation</strong></p>
+                                <p>Authors: Johe Doe, Alan Turing, Yoshua Bengio</p>
+                                <p>Venue: Journal of Machine Learning Research (2023)</p>
+                                <p>Citations: 128</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Efficient Neural Network Architectures for Natural Language
+                                        Processing</strong></p>
+                                <p>Authors: John Doe, Andrew Ng, Geoffrey Hinton</p>
+                                <p>Venue: Conference on Neural Processing Systems (2022)</p>
+                                <p>Citations: 56</p>
+                            </div>
                         </div>
-                        <div class="setting-item">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" value="john.doe@gmail.com">
+                        <div class="publication-category">
+                            <h3>Conference Papers</h3>
+                            <div class="publication-item">
+                                <p><strong>Deep Learning for Computer Vision</strong></p>
+                                <p>Authors: Johe Doe, Yoshua Bengio, Aaron Courville</p>
+                                <p>Venue: Conference on Computer Pattern Recognition (2020)</p>
+                                <p>Citations: 201</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Robust Computer Vision for Autonomous Vehicles in Adverse Weather</strong>
+                                </p>
+                                <p>Authors: John Doe</p>
+                                <p>Venue: CVPR (2021)</p>
+                                <p>Citations: 187</p>
+                            </div>
                         </div>
-                        <div class="setting-item">
-                            <label for="title">Title</label>
-                            <input type="text" id="title" value="Research Scientist">
+                        <div class="publication-category">
+                            <h3>Books and Chapters</h3>
+                            <div class="publication-item">
+                                <p><strong>Deep Learning for Natural Language Processing</strong></p>
+                                <p>Authors: Johe Doe, Hinrich Schütze</p>
+                                <p>Publisher: Cambridge University Press (2020)</p>
+                                <p>Citations: 201</p>
+                            </div>
+                            <div class="publication-item">
+                                <p><strong>Decolonizing AI Education (Book Chapter)</strong></p>
+                                <p>Authors: Johe Doe, Hinrich Schütze</p>
+                                <p>Book: AI Ethics in Higher Education (Springer, 2021)</p>
+                                <p>Citations: 68</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="settings-group">
-                        <h3>Preferences</h3>
-                        <div class="setting-item">
-                            <label for="notifications">Email Notifications</label>
-                            <input type="checkbox" id="notifications" checked>
-                        </div>
-                        <div class="setting-item">
-                            <label for="dataSync">Data Synchronization</label>
-                            <input type="checkbox" id="dataSync" checked>
-                        </div>
-                        <div class="setting-item">
-                            <label for="theme">Theme</label>
-                            <select id="theme">
-                                <option value="light">Light</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="settings-group">
-                        <h3>Profile Integration</h3>
-                        <div class="setting-item">
-                            <label for="googleScholar">Google Scholar</label>
-                            <input type="text" id="googleScholar" placeholder="Profile URL">
-                        </div>
-                        <div class="setting-item">
-                            <label for="orcid">ORCID</label>
-                            <input type="text" id="orcid" placeholder="Profile URL">
-                        </div>
-                    </div>
-
-                    <button class="btn-primary save-settings">Save Changes</button>
                 </div>
             </section>
 
+            <!-- Analytics  -->
+            <section id="analytics-section" class="analytics-panel hidden">
+                <h3>Analytics</h3>
+
+                <div class="chart-container">
+                    <canvas id="papersCitationsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="impactFactorChart"></canvas>
+                </div>
+
+            </section>
+
+            <!-- collaboration -->
             <section id="collaborations-section" class="collaboration-panel hidden">
                 <h3>Active Collaborations</h3>
                 <div class="collaboration-container">
@@ -482,72 +500,63 @@
                 </div>
             </section>
 
-            <section id="analytics-section" class="analytics-panel hidden">
-                <h3>Analytics</h3>
-
-                <div class="chart-container">
-                    <canvas id="papersCitationsChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <canvas id="impactFactorChart"></canvas>
-                </div>
-
-            </section>
-
-            <section id="publications-section" class="publications-panel hidden">
-                <div class="panel-container">
-                    <div class="panel-group">
-                        <h2>Publications</h2> <br>
-                        <div class="publication-category">
-                            <h3>Computer Science & AI</h3>
-                            <div class="publication-item">
-                                <p><strong>Transformer-Based Models for Low-Resource Language Translation</strong></p>
-                                <p>Authors: Johe Doe, Alan Turing, Yoshua Bengio</p>
-                                <p>Venue: Journal of Machine Learning Research (2023)</p>
-                                <p>Citations: 128</p>
-                            </div>
-                            <div class="publication-item">
-                                <p><strong>Efficient Neural Network Architectures for Natural Language
-                                        Processing</strong></p>
-                                <p>Authors: John Doe, Andrew Ng, Geoffrey Hinton</p>
-                                <p>Venue: Conference on Neural Processing Systems (2022)</p>
-                                <p>Citations: 56</p>
-                            </div>
+            <!-- Settings -->
+            <section id="settings-section" class="settings-section hidden">
+                <div class="settings-container">
+                    <div class="settings-group">
+                        <h3>Profile Settings</h3>
+                        <div class="setting-item">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" value="John Doe">
                         </div>
-                        <div class="publication-category">
-                            <h3>Conference Papers</h3>
-                            <div class="publication-item">
-                                <p><strong>Deep Learning for Computer Vision</strong></p>
-                                <p>Authors: Johe Doe, Yoshua Bengio, Aaron Courville</p>
-                                <p>Venue: Conference on Computer Pattern Recognition (2020)</p>
-                                <p>Citations: 201</p>
-                            </div>
-                            <div class="publication-item">
-                                <p><strong>Robust Computer Vision for Autonomous Vehicles in Adverse Weather</strong>
-                                </p>
-                                <p>Authors: John Doe</p>
-                                <p>Venue: CVPR (2021)</p>
-                                <p>Citations: 187</p>
-                            </div>
+                        <div class="setting-item">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="john.doe@gmail.com">
                         </div>
-                        <div class="publication-category">
-                            <h3>Books and Chapters</h3>
-                            <div class="publication-item">
-                                <p><strong>Deep Learning for Natural Language Processing</strong></p>
-                                <p>Authors: Johe Doe, Hinrich Schütze</p>
-                                <p>Publisher: Cambridge University Press (2020)</p>
-                                <p>Citations: 201</p>
-                            </div>
-                            <div class="publication-item">
-                                <p><strong>Decolonizing AI Education (Book Chapter)</strong></p>
-                                <p>Authors: Johe Doe, Hinrich Schütze</p>
-                                <p>Book: AI Ethics in Higher Education (Springer, 2021)</p>
-                                <p>Citations: 68</p>
-                            </div>
+                        <div class="setting-item">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" value="Research Scientist">
                         </div>
                     </div>
+
+                    <div class="settings-group">
+                        <h3>Preferences</h3>
+                        <div class="setting-item">
+                            <label for="notifications">Email Notifications</label>
+                            <input type="checkbox" id="notifications" checked>
+                        </div>
+                        <div class="setting-item">
+                            <label for="dataSync">Data Synchronization</label>
+                            <input type="checkbox" id="dataSync" checked>
+                        </div>
+                        <div class="setting-item">
+                            <label for="theme">Theme</label>
+                            <select id="theme">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="settings-group">
+                        <h3>Profile Integration</h3>
+                        <div class="setting-item">
+                            <label for="googleScholar">Google Scholar</label>
+                            <input type="text" id="googleScholar" placeholder="Profile URL">
+                        </div>
+                        <div class="setting-item">
+                            <label for="orcid">ORCID</label>
+                            <input type="text" id="orcid" placeholder="Profile URL">
+                        </div>
+                    </div>
+
+                    <button class="btn-primary save-settings">Save Changes</button>
                 </div>
             </section>
+
+            
+
+            
         </main>
 
         <aside class="right-sidebar">
