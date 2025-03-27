@@ -6,20 +6,12 @@
     <title>Search Papers - ResearchHub</title>
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/headear-fetch.js"></script>
+    <script src="/js/search.js"></script>
 </head>
 <body class="search-page">
     <header class="main-header">
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html">ResearchHub</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="search.html" class="active">Search</a></li>
-                <li><a href="login.html" class="btn-login">Login</a></li>
-            </ul>
-        </nav>
+        
     </header>
 
     <main class="search-container">
@@ -29,29 +21,104 @@
                 <input type="text" placeholder="Search by title, author, or keywords">
                 <button class="search-button">Search</button>
             </div>
+            <div class="selected-filters">
+                <!-- Filter tags will be added here dynamically -->
+            </div>
         </div>
 
         <div class="filter-section">
             <div class="filter-group">
                 <h3>Categories</h3>
-                <label><input type="checkbox"> Computer Science</label>
-                <label><input type="checkbox"> Medicine</label>
-                <label><input type="checkbox"> Physics</label>
-                <label><input type="checkbox"> Biology</label>
+                <select>
+                    <option value="">Select Category</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="Yoga">Yoga</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Machine Learning">Machine Learning</option>
+                    <option value="Meditation">Meditation</option>
+                    <option value="Wellness">Wellness</option>
+                    <option value="Environmental Science">Environmental Science</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Sociology">Sociology</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="History">History</option>
+                    <option value="Geography">Geography</option>
+                </select>
             </div>
             <div class="filter-group">
                 <h3>Year</h3>
-                <label><input type="checkbox"> 2024</label>
-                <label><input type="checkbox"> 2023</label>
-                <label><input type="checkbox"> 2022</label>
-                <label><input type="checkbox"> 2021</label>
+                <select>
+                    <option value="">Select Year</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                    <option value="2005">2005</option>
+                    <option value="2004">2004</option>
+                    <option value="2003">2003</option>
+                    <option value="2002">2002</option>
+                    <option value="2001">2001</option>
+                    <option value="2000">2000</option>
+                    <option value="1999">1999</option>
+                    <option value="1998">1998</option>
+                    <option value="1997">1997</option>
+                    <option value="1996">1996</option>
+                    <option value="1995">1995</option>
+                    <option value="1994">1994</option>
+                    <option value="1993">1993</option>
+                    <option value="1992">1992</option>
+                    <option value="1991">1991</option>
+                    <option value="1990">1990</option>
+                    <option value="1989">1989</option>
+                    <option value="1988">1988</option>
+                    <option value="1987">1987</option>
+                    <option value="1986">1986</option>
+                    <option value="1985">1985</option>
+                    <option value="1984">1984</option>
+                    <option value="1983">1983</option>
+                    <option value="1982">1982</option>
+                    <option value="1981">1981</option>
+                    <option value="1980">1980</option>
+                </select>
             </div>
             <div class="filter-group">
                 <h3>Publication Type</h3>
-                <label><input type="checkbox"> Journal Article</label>
-                <label><input type="checkbox"> Conference Paper</label>
-                <label><input type="checkbox"> Review</label>
-                <label><input type="checkbox"> Book Chapter</label>
+                <select>
+                    <option value="">Select Publication Type</option>
+                    <option value="Journal Article">Journal Article</option>
+                    <option value="Conference Paper">Conference Paper</option>
+                    <option value="Review">Review</option>
+                    <option value="Book Chapter">Book Chapter</option>
+                    <option value="Thesis">Thesis</option>
+                    <option value="Dissertation">Dissertation</option>
+                    <option value="Research Report">Research Report</option>
+                    <option value="Technical Report">Technical Report</option>
+                    <option value="Working Paper">Working Paper</option>
+                </select>
             </div>
         </div>
 

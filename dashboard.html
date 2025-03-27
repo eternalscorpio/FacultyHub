@@ -9,6 +9,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 
@@ -19,11 +22,12 @@
                 <a href="index.html">ResearchHub</a>
             </div>
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="dashboard.html" class="active">Dashboard</a></li>
                 <li><a href="papers.html">My Papers</a></li>
                 <!-- <li><a href="tasks.html">Tasks</a></li> -->
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="#" class="btn-logout">Logout</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="#" class="btn-analytics">Analytics</a></li>
             </ul>
             <div class="user-quick-actions">
                 <div class="notifications">
@@ -56,18 +60,22 @@
                 <ul>
                     <li><a href="#overview" class="active"><span class="nav-icon"><i
                                     class="bi bi-kanban-fill"></i></span> Overview</a></li>
-                    <li><a href="#publications"><span class="nav-icon"><i class="bi bi-journals"></i></span>
+                    <li><a href="#publications"><span class="nav-icon"><i class="bi bi-journals bg-primary"></i></span>
                             Publications</a></li>
                     <!-- <li><a href="#tasks"><span class="nav-icon"><i class="bi bi-check2-square"></i></span> Tasks</a></li> -->
-                    <li><a href="#analytics"><span class="nav-icon"><i class="bi bi-graph-up-arrow"></i></span>
+                    <li><a href="#analytics"><span class="nav-icon"><i
+                                    class="bi bi-graph-up-arrow bg-primary"></i></span>
                             Analytics</a></li>
-                    <li><a href="#collaborations"><span class="nav-icon"><i class="bi bi-people-fill"></i></span>
+                    <li><a href="#collaborations"><span class="nav-icon"><i
+                                    class="bi bi-people-fill bg-primary"></i></span>
                             Collaborations</a></li>
-                    <li><a href="#reviews"><span class="nav-icon"><i class="bi bi-search"></i></span> Reviews</a></li>
-                    <li><a href="#settings"><span class="nav-icon"><i class="bi bi-gear"></i></span> Settings</a></li>
+                    <li><a href="#reviews"><span class="nav-icon"><i class="bi bi-search bg-primary"></i></span>
+                            Reviews</a></li>
+                    <li><a href="#settings"><span class="nav-icon"><i class="bi bi-gear-fill bg-primary"></i></span>
+                            Settings</a></li>
                 </ul>
             </nav>
-            <div class="sidebar-footer">
+            <!-- <div class="sidebar-footer">
                 <div class="progress-card">
                     <h4>Monthly Goal</h4>
                     <div class="progress-bar">
@@ -75,32 +83,33 @@
                     </div>
                     <p>3 of 4 papers published</p>
                 </div>
-            </div>
+            </div> -->
         </aside>
 
         <main class="dashboard-main">
             <div class="dashboard-header">
                 <div class="welcome-section">
-                    <h1>Welcome back, John! 👋</h1>
+                    <h1>Welcome back, John!</h1>
                     <p class="subtitle">Here's what's happening with your research</p>
                 </div>
                 <div class="quick-actions">
-                    <button class="btn-primary"><span class="btn-icon">📝</span> New Paper</button>
+                    <button class="btn-primary"><span class="btn-icon"><i class="bi bi-journal-plus"></i></span> New Paper</button>
                     <!-- <button class="btn-secondary"><span class="btn-icon">✨</span> Create Task</button> -->
-                    <button class="btn-outline"><span class="btn-icon">🤝</span> Collaborate</button>
+                    <button class="btn-outline"><span class="btn-icon"><i
+                                class="fa-solid fa-handshake-simple bg-primary"></i></span> Collaborate</button>
                 </div>
             </div>
 
             <div class="dashboard-grid">
                 <div class="dashboard-card gradient-1">
-                    <div class="card-icon">📚</div>
+                    <div class="card-icon"><i class="fa-solid fa-book"></i></div>
                     <h3>Publications</h3>
                     <div class="stat">12</div>
                     <p>Total Papers</p>
                     <div class="trend up">↑ 23% from last month</div>
                 </div>
                 <div class="dashboard-card gradient-1">
-                    <div class="card-icon">📊</div>
+                    <div class="card-icon"><i class="fa-solid fa-chart-simple"></i></div>
                     <h3>Citations</h3>
                     <div class="stat">156</div>
                     <p>Total Citations</p>
@@ -114,7 +123,7 @@
                     <div class="trend down">↓ 2 from yesterday</div>
                 </div> -->
                 <div class="dashboard-card gradient-1">
-                    <div class="card-icon">⭐</div>
+                    <div class="card-icon"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     <h3>Impact</h3>
                     <div class="stat">4.2</div>
                     <p>Impact Factor</p>
@@ -124,14 +133,15 @@
 
             <div class="dashboard-grid-2">
                 <section class="summary">
-                    <h2>Summary</h2>
-                    <p>Dr. John Deo is a computer science researcher specializing in machine learning and natural
-                        language processing, with 15+ publications in top-tier venues (NeurIPS, ICML, ACL) that have
-                        accumulated 1,200+ citations (h-index: 14). His work on efficient transformer architectures and
-                        low-resource NLP has earned a Best Paper Honorable Mention at ACL 2023 and has been implemented
-                        in industry applications reaching 2M+ users. Currently driving innovation in interpretable AI
-                        systems, he collaborates with both academic institutions (MIT, Stanford) and tech leaders
-                        (Google AI, OpenAI) to bridge cutting-edge research with real-world deployment.</p>
+                    <h2 class="summary-head">Summary</h2>
+                    <p class="summary-para">Dr. John Deo is a computer science researcher specializing in machine
+                        learning and natural language processing, with 15+ publications in top-tier venues (NeurIPS,
+                        ICML, ACL) that have accumulated 256+ citations (h-index: 14). His work on <b>efficient
+                            transformer architectures</b> and low-resource NLP has earned a Best Paper Honorable Mention
+                        at ACL 2023 and has been implemented in industry applications reaching 2M+ users. Currently
+                        driving innovation in interpretable AI systems, he collaborates with both academic institutions
+                        (MIT, Stanford) and <b>tech leaders (Google AI, OpenAI)</b> to bridge cutting-edge research with
+                        real-world deployment.</p>
                 </section>
                 <section class="paper-timeline">
                     <h2>Publication Timeline</h2>
@@ -168,8 +178,8 @@
                     <div class="collaboration-grid">
                         <div class="collaboration-card">
                             <div class="collaborator-avatars">
-                                <img src="https://via.placeholder.com/32" alt="Collaborator 1">
-                                <img src="https://via.placeholder.com/32" alt="Collaborator 2">
+                                <img src="/img/collab-1.jpg" alt="Collaborator 1">
+                                <img src="/img/collab-2.jpg" alt="Collaborator 2">
                                 <span class="more-collaborators">+3</span>
                             </div>
                             <h4>AI Research Project</h4>
@@ -183,8 +193,8 @@
                         </div>
                         <div class="collaboration-card">
                             <div class="collaborator-avatars">
-                                <img src="https://via.placeholder.com/32" alt="Collaborator 1">
-                                <img src="https://via.placeholder.com/32" alt="Collaborator 2">
+                                <img src="/img/profile_avatar.jpeg" alt="Collaborator 1">
+                                <img src="/img/collab-4.jpg" alt="Collaborator 2">
                             </div>
                             <h4>ML Framework</h4>
                             <p>With MIT Lab</p>
@@ -232,7 +242,7 @@
                     <h2>Recent Activity</h2>
                     <div class="activity-list">
                         <div class="activity-item">
-                            <div class="activity-icon">📝</div>
+                            <div class="activity-icon"><i class="bi bi-journals bg-primary"></i></div>
                             <div class="activity-details">
                                 <h4>Paper Submitted</h4>
                                 <p>Machine Learning in Healthcare</p>
@@ -241,7 +251,7 @@
                             <div class="activity-status success">Submitted</div>
                         </div>
                         <div class="activity-item">
-                            <div class="activity-icon">👥</div>
+                            <div class="activity-icon"><i class="fa-solid fa-user-group bg-primary"></i></div>
                             <div class="activity-details">
                                 <h4>New Collaboration</h4>
                                 <p>Project with Stanford University</p>
@@ -250,7 +260,7 @@
                             <div class="activity-status pending">In Progress</div>
                         </div>
                         <div class="activity-item">
-                            <div class="activity-icon">🔍</div>
+                            <div class="activity-icon"><i class="bi bi-search bg-primary"></i></div>
                             <div class="activity-details">
                                 <h4>Review Completed</h4>
                                 <p>Neural Networks Paper</p>
@@ -262,7 +272,7 @@
                 </section>
             </div>
 
-            <section class="insights-section">
+            <!-- <section class="insights-section">
                 <h2>Research Insights</h2>
                 <div class="insights-grid">
                     <div class="insight-card">
@@ -314,7 +324,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main>
 
         <aside class="right-sidebar">
@@ -322,21 +332,21 @@
                 <h3>Notifications</h3>
                 <div class="notification-list">
                     <div class="notification-item unread">
-                        <div class="notification-icon">📢</div>
+                        <div class="notification-icon"><i class="fa-solid fa-bullhorn bg-primary"></i></div>
                         <div class="notification-content">
                             <p>Your paper was accepted!</p>
                             <span class="notification-time">1 hour ago</span>
                         </div>
                     </div>
                     <div class="notification-item unread">
-                        <div class="notification-icon">👥</div>
+                        <div class="notification-icon"><i class="fa-solid fa-user-group bg-primary"></i></div>
                         <div class="notification-content">
                             <p>New collaboration request</p>
                             <span class="notification-time">3 hours ago</span>
                         </div>
                     </div>
                     <div class="notification-item">
-                        <div class="notification-icon">💬</div>
+                        <div class="notification-icon"><i class="fa-solid fa-comment bg-primary"></i></div>
                         <div class="notification-content">
                             <p>New comment on your paper</p>
                             <span class="notification-time">1 day ago</span>
@@ -370,18 +380,19 @@
                 <h3>Key Metrics</h3>
                 <div class="metric-list">
                     <div class="metric-item">
-                        <div class="metric-icon">📚</div>
+                        <div class="metric-icon"><i class="bi bi-graph-up-arrow bg-primary"></i></div>
                         <div class="metric-info">
                             <h4>H-Index</h4>
-                            <div class="metric-value">18</div>
+                            
                         </div>
+                        <div class="metric-value">18</div>
                     </div>
                     <div class="metric-item">
-                        <div class="metric-icon">🌟</div>
+                        <div class="metric-icon"><i class="bi bi-clipboard-data bg-primary"></i></div>
                         <div class="metric-info">
                             <h4>i10-Index</h4>
-                            <div class="metric-value">25</div>
                         </div>
+                        <div class="metric-value">25</div>
                     </div>
                 </div>
             </section>

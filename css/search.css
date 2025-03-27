@@ -1,4 +1,15 @@
 /* Search Page Styles */
+:root {
+    --primary: #0057D9;
+    --secondary: #1E293B;
+    --accent: #0084FF;
+    --light: #F8FAFC;
+    --dark: #1A1F29;
+    --gray: #64748B;
+    --hover: #0047B3;
+    --background-gradient: linear-gradient(135deg, #0057D9 0%, #003B8B 100%);
+}
+
 .search-page {
     background: #f8f9fa;
 }
@@ -49,6 +60,31 @@
     background: #224cad;
 }
 
+.selected-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.filter-tag {
+    background-color: #e0e0e0;
+    padding: 4px 12px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-tag button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    padding: 0;
+}
+
 .filter-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -62,6 +98,20 @@
 
 .filter-group {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5H7z"/></svg>') no-repeat right 0.5em center/15px 15px;
+    width: 200px;
 }
 
 .filter-group h3 {

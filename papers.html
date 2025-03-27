@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Papers - ResearchHub</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/papers.css">
@@ -14,12 +18,22 @@
                 <a href="index.html">ResearchHub</a>
             </div>
             <ul class="nav-links">
-                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" >Dashboard</a></li>
                 <li><a href="papers.html" class="active">My Papers</a></li>
-                <li><a href="tasks.html">Tasks</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="#" class="btn-logout">Logout</a></li>
+                <!-- <li><a href="tasks.html">Tasks</a></li> -->
+                <li><a href="search.html">Search</a></li>
+                <li><a href="#" class="btn-analytics">Analytics</a></li>
             </ul>
+            <div class="user-quick-actions">
+                <div class="notifications">
+                    <span class="notification-badge">3</span>
+                    <span class="notification-icon"><i class="bi bi-bell-fill"></i></span>
+                </div>
+                <div class="user-avatar-small">
+                    <img src="/img/profile_avatar.jpeg" alt="User Avatar">
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -33,29 +47,31 @@
         </div>
 
         <div class="papers-grid">
-            <div class="paper-card">
-                <div class="paper-image">
-                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d" alt="AI Research">
-                    <span class="paper-status published">Published</span>
-                </div>
-                <div class="paper-content">
-                    <h3>Advances in Neural Networks for Medical Diagnosis</h3>
-                    <p class="journal-name">Journal of Medical AI, Vol. 45</p>
-                    <div class="paper-meta">
-                        <span>Citations: 127</span>
-                        <span>Downloads: 3.2k</span>
+            <a href="paper.html">
+                <div class="paper-card">
+                    <div class="paper-image">
+                        <img src="/img/paper-1.jpeg" alt="AI Research">
+                        <span class="paper-status published">Published</span>
                     </div>
-                    <div class="paper-authors">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Author" class="author-avatar">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Author" class="author-avatar">
-                        <span class="more-authors">+2</span>
+                    <div class="paper-content">
+                        <h3>Advances in Neural Networks for Medical Diagnosis</h3>
+                        <p class="journal-name">Journal of Medical AI, Vol. 45</p>
+                        <div class="paper-meta">
+                            <span>Citations: 127</span>
+                            <span>Downloads: 3.2k</span>
+                        </div>
+                        <div class="paper-authors">
+                            <img src="/img/profile_avatar.jpeg" alt="Author" class="author-avatar">
+                            <img src="/img/collab-2.jpg" alt="Author" class="author-avatar">
+                            <span class="more-authors">+2</span>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <div class="paper-card">
                 <div class="paper-image">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Data Science">
+                    <img src="/img/paper-2.jpeg" alt="Data Science">
                     <span class="paper-status under-review">Under Review</span>
                 </div>
                 <div class="paper-content">
@@ -66,26 +82,26 @@
                         <span>Review Stage: 2/3</span>
                     </div>
                     <div class="paper-authors">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Author" class="author-avatar">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2" alt="Author" class="author-avatar">
+                        <img src="/img/profile_avatar.jpeg" alt="Author" class="author-avatar">
+                        <img src="/img/collab-1.jpg" alt="Author" class="author-avatar">
                     </div>
                 </div>
             </div>
 
             <div class="paper-card">
                 <div class="paper-image">
-                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31" alt="Quantum Research">
-                    <span class="paper-status draft">Draft</span>
+                    <img src="/img/paper-3.jpeg" alt="Quantum Research">
+                    <span class="paper-status under-review">Under Review</span>
                 </div>
                 <div class="paper-content">
                     <h3>Quantum Computing: Breaking Encryption Barriers</h3>
                     <p class="journal-name">Quantum Science Review</p>
                     <div class="paper-meta">
-                        <span>Last edited: 2 days ago</span>
-                        <span>Completion: 75%</span>
+                        <span>Submitted: Apr 21, 2024</span>
+                        <span>Review Stage: 1/3</span>
                     </div>
                     <div class="paper-authors">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e" alt="Author" class="author-avatar">
+                        <img src="/img/profile_avatar.jpeg" alt="Author" class="author-avatar">
                     </div>
                 </div>
             </div>
@@ -95,7 +111,7 @@
             <h2>Featured Journals</h2>
             <div class="journal-grid">
                 <div class="journal-card">
-                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d" alt="Journal Cover" class="journal-cover">
+                    <img src="/img/paper-1.jpeg" alt="Journal Cover" class="journal-cover">
                     <div class="journal-info">
                         <h3>Nature Artificial Intelligence</h3>
                         <p>Impact Factor: 15.4</p>
@@ -103,7 +119,7 @@
                     </div>
                 </div>
                 <div class="journal-card">
-                    <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69" alt="Journal Cover" class="journal-cover">
+                    <img src="/img/paper-4.jpeg" alt="Journal Cover" class="journal-cover">
                     <div class="journal-info">
                         <h3>Science Robotics</h3>
                         <p>Impact Factor: 12.8</p>
@@ -111,7 +127,7 @@
                     </div>
                 </div>
                 <div class="journal-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Journal Cover" class="journal-cover">
+                    <img src="/img/paper-2.jpeg" alt="Journal Cover" class="journal-cover">
                     <div class="journal-info">
                         <h3>Cell Data Science</h3>
                         <p>Impact Factor: 14.2</p>
