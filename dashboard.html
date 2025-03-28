@@ -16,6 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="/js/chart.js"></script>
+    <script src="/js/new-paper.js"></script>
 </head>
 
 <body class="dashboard-page">
@@ -52,7 +53,7 @@
                     <img src="/img/profile_avatar.jpeg" alt="User Avatar">
                     <div class="user-status online"></div>
                 </div>
-                <h3>John Doe</h3>
+                <h3>Rajiv Sharma</h3>
                 <p>Research Scientist</p>
                 <div class="user-badges">
                     <span class="badge" title="Verified Researcher"><i class="bi bi-person-check bg-primary"></i></span>
@@ -94,7 +95,7 @@
 
             <div class="dashboard-header">
                 <div class="welcome-section">
-                    <h1>Welcome back, John!</h1>
+                    <h1>Welcome back, Rajiv!</h1>
                     <p class="subtitle">Here's what's happening with your research</p>
                 </div>
                 <div class="quick-actions">
@@ -103,6 +104,47 @@
                     <!-- <button class="btn-secondary"><span class="btn-icon">✨</span> Create Task</button> -->
                     <button class="btn-outline"><span class="btn-icon"><i
                                 class="fa-solid fa-handshake-simple bg-primary"></i></span> Collaborate</button>
+                </div>
+            </div>
+
+            <!-- Modal overlay (hidden by default) -->
+            <div id="paperModal" class="modal-overlay">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Submit New Paper</h3>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <form id="paperForm" class="modal-form">
+                        <div class="form-group">
+                            <label for="paperTitle">Paper Title</label>
+                            <input type="text" id="paperTitle" name="paperTitle" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paperAuthors">Authors</label>
+                            <input type="text" id="paperAuthors" name="paperAuthors" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paperAbstract">Abstract</label>
+                            <textarea id="paperAbstract" name="paperAbstract" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paperKeywords">Keywords (comma separated)</label>
+                            <input type="text" id="paperKeywords" name="paperKeywords">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="paperFile">Upload Paper (PDF/DOCX)</label>
+                            <input type="file" id="paperFile" name="paperFile" accept=".pdf,.doc,.docx" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-outline cancel-btn">Cancel</button>
+                            <button type="submit" class="btn-primary">Submit Paper</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -141,7 +183,7 @@
             <div class="dashboard-grid-2">
                 <section class="summary">
                     <h2 class="summary-head">Summary</h2>
-                    <p class="summary-para">Dr. John Deo is a computer science researcher specializing in machine
+                    <p class="summary-para">Dr. Rajiv Sharma is a computer science researcher specializing in machine
                         learning and natural language processing, with 15+ publications in top-tier venues (NeurIPS,
                         ICML, ACL) that have accumulated 256+ citations (h-index: 14). His work on <b>efficient
                             transformer architectures</b> and low-resource NLP has earned a Best Paper Honorable Mention
@@ -296,7 +338,7 @@
                             <div class="publication-item">
                                 <p><strong>Efficient Neural Network Architectures for Natural Language
                                         Processing</strong></p>
-                                <p>Authors: John Doe, Andrew Ng, Geoffrey Hinton</p>
+                                <p>Authors: Rajiv Sharma, Andrew Ng, Geoffrey Hinton</p>
                                 <p>Venue: Conference on Neural Processing Systems (2022)</p>
                                 <p>Citations: 56</p>
                             </div>
@@ -312,7 +354,7 @@
                             <div class="publication-item">
                                 <p><strong>Robust Computer Vision for Autonomous Vehicles in Adverse Weather</strong>
                                 </p>
-                                <p>Authors: John Doe</p>
+                                <p>Authors: Rajiv Sharma</p>
                                 <p>Venue: CVPR (2021)</p>
                                 <p>Citations: 187</p>
                             </div>
@@ -449,7 +491,7 @@
             <!-- Review  -->
             <section id="reviews-section" class="review-section hidden">
                 <h2>User Reviews</h2>
-            
+
                 <!-- Individual Review Item -->
                 <div class="review-item">
                     <h3 class="review-title">Excellent Dashboard Performance and UI</h3>
@@ -460,18 +502,19 @@
                     </div>
                     <div class="review-author">
                         <img src="/img/collab-5.jpg" alt="User Avatar" class="review-avatar">
-                        <span class="reviewer-name">John Doe</span>
+                        <span class="reviewer-name">Rajiv Sharma</span>
                     </div>
                     <p class="review-text">
-                        The dashboard is intuitive, fast, and visually appealing. The performance is outstanding, and the UX design is well thought out. Great work by the development team!
+                        The dashboard is intuitive, fast, and visually appealing. The performance is outstanding, and
+                        the UX design is well thought out. Great work by the development team!
                     </p>
                     <div class="review-actions">
                         <a href="#" class="review-cite">Cite</a>
                         <button class="download-review">Download full review</button>
                     </div>
                 </div>
-            
-                <div class="review-item" >
+
+                <div class="review-item">
                     <h3 class="review-title">Feature-Rich Yet User-Friendly</h3>
                     <div class="review-meta">
                         <span class="badge review-category">Functionality</span>
@@ -483,34 +526,36 @@
                         <span class="reviewer-name">Emma Smith</span>
                     </div>
                     <p class="review-text">
-                        The dashboard offers multiple features while maintaining ease of use. Navigation is smooth, and real-time data updates are seamless.
+                        The dashboard offers multiple features while maintaining ease of use. Navigation is smooth, and
+                        real-time data updates are seamless.
                     </p>
                     <div class="review-actions">
                         <a href="#" class="review-cite">Cite</a>
                         <button class="download-review">Download full review</button>
                     </div>
                 </div>
-            <div class="review-item">
-                <h3 class="review-title">Excellent Collaboration Experience</h3>
-                <div class="review-meta">
-                    <span class="badge review-category">Collaboration</span>
-                    <span class="badge review-status">Verified User</span>
-                    <span class="review-date">Jan 2025</span>
+                <div class="review-item">
+                    <h3 class="review-title">Excellent Collaboration Experience</h3>
+                    <div class="review-meta">
+                        <span class="badge review-category">Collaboration</span>
+                        <span class="badge review-status">Verified User</span>
+                        <span class="review-date">Jan 2025</span>
+                    </div>
+                    <div class="review-author">
+                        <img src="/img/collab-4.jpg" alt="User Avatar" class="review-avatar">
+                        <span class="reviewer-name">Michael Brown</span>
+                    </div>
+                    <p class="review-text">
+                        The collaboration tools provided are top-notch. The interface is user-friendly, and the
+                        real-time feedback feature is incredibly helpful.
+                    </p>
+                    <div class="review-actions">
+                        <a href="#" class="review-cite">Cite</a>
+                        <button class="download-review">Download full review</button>
+                    </div>
                 </div>
-                <div class="review-author">
-                    <img src="/img/collab-4.jpg" alt="User Avatar" class="review-avatar">
-                    <span class="reviewer-name">Michael Brown</span>
-                </div>
-                <p class="review-text">
-                    The collaboration tools provided are top-notch. The interface is user-friendly, and the real-time feedback feature is incredibly helpful.
-                </p>
-                <div class="review-actions">
-                    <a href="#" class="review-cite">Cite</a>
-                    <button class="download-review">Download full review</button>
-                </div>
-            </div>
             </section>
-            
+
 
             <!-- Settings -->
             <section id="settings-section" class="settings-section hidden">
@@ -519,11 +564,11 @@
                         <h3>Profile Settings</h3>
                         <div class="setting-item">
                             <label for="fullName">Full Name</label>
-                            <input type="text" id="fullName" value="John Doe">
+                            <input type="text" id="fullName" value="Rajiv Sharma">
                         </div>
                         <div class="setting-item">
                             <label for="email">Email</label>
-                            <input type="email" id="email" value="john.doe@gmail.com">
+                            <input type="email" id="email" value="rajiv.sharma@gmail.com">
                         </div>
                         <div class="setting-item">
                             <label for="title">Title</label>
@@ -566,9 +611,9 @@
                 </div>
             </section>
 
-            
 
-            
+
+
         </main>
 
         <aside class="right-sidebar">

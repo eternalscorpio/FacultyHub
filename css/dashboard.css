@@ -516,6 +516,11 @@ body {
     padding: 0.75rem;
     background: var(--background);
     border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.task-item span{
+    margin-left: auto;
 }
 
 .metric-value{
@@ -849,3 +854,235 @@ body {
     background: #007bff;
     color: white;
 }
+
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .modal-form {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  .form-group input[type="file"] {
+    padding: 5px;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  
+  .cancel-btn {
+    margin-right: 10px;
+  }
+
+  /* Collaboration Modal Specific Styles */
+.collab-modal {
+    max-width: 800px;
+  }
+  
+  .collab-container {
+    padding: 0 20px 20px;
+  }
+  
+  .collab-search {
+    margin-bottom: 25px;
+  }
+  
+  .search-bar {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+  }
+  
+  .search-bar .search-btn {
+    border-radius: 0 4px 4px 0;
+    padding: 10px 15px;
+  }
+  
+  .search-filters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-filters select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .collab-section {
+    margin-bottom: 25px;
+  }
+  
+  .collab-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .collab-list {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .collab-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    background: white;
+  }
+  
+  .collab-item:last-child {
+    border-bottom: none;
+  }
+  
+  .collab-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .collab-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #4a6baf;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .collab-name {
+    font-weight: 500;
+  }
+  
+  .collab-email {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .collab-access {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .access-select {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .remove-collab, .cancel-invite {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .remove-collab:hover, .cancel-invite:hover {
+    color: #d33;
+  }
+  
+  .collab-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .status-pending {
+    color: #e67e22;
+    font-size: 0.9rem;
+  }
+  
+  /* Search results specific */
+  .search-results .collab-item {
+    cursor: pointer;
+  }
+  
+  .search-results .collab-item:hover {
+    background-color: #f5f5f5;
+  }

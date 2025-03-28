@@ -79,6 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Export the function
+    
     window.showSection = showSection;
 });
