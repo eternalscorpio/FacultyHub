@@ -38,8 +38,7 @@ FacultyPub is an intelligent, automated web dashboard designed to help faculty m
 
 ## 📸 UI Preview
 
-> Add screenshots or demo links here  
-(Example: Paper analytics dashboard, citation trends, collaborator list)
+(https://researchhub-project.netlify.app/)
 
 ---
 
